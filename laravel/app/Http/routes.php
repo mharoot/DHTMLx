@@ -32,3 +32,9 @@ Route::get('/gantt', function () {
 });
 
 Route::match(['get', 'post'], '/gantt_data', "GanttController@data");
+
+
+Route::match(['get', 'post'], '/product_data', "ProductController@data");
+Route::get('/products', function () {
+    return view('products');
+});
